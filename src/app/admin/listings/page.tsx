@@ -6,6 +6,7 @@ import { getCategories, getListings, getRates } from "@/lib/store";
 import { supabaseAdmin } from "@/lib/supabase";
 import { usd } from "@/lib/format";
 import { seedAction } from "../actions";
+export const dynamic = "force-dynamic";
 
 export default async function AdminListings() {
   const [list, cats, rates] = await Promise.all([getListings(true), getCategories(true), getRates()]);

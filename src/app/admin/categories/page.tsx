@@ -1,5 +1,6 @@
 import { getCategories } from "@/lib/store";
 import { addCategoryAction, deleteCategoryAction, renameCategoryAction, toggleCategoryAction } from "../actions";
+export const dynamic = "force-dynamic";
 
 export default async function CategoriesPage() {
   const cats = await getCategories(true);

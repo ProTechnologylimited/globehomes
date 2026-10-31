@@ -1,6 +1,7 @@
 import { getListings, getCategories } from "@/lib/store";
 import { supabaseAdmin } from "@/lib/supabase";
 import { usd } from "@/lib/format";
+export const dynamic = "force-dynamic";
 
 export default async function Dashboard() {
   const [listings, cats] = await Promise.all([getListings(true), getCategories(true)]);
